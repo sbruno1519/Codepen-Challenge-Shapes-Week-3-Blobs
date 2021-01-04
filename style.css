@@ -1,0 +1,194 @@
+body {
+  background: #333399;
+}
+
+#lamptop {
+  height: 0px;
+  width: 30px;
+  border: solid;
+  border-color: transparent transparent black transparent;
+  border-width:10px 20px 60px 20px;
+  background: transparent;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  margin-top: 1px;
+  transform: translate(-50%, -50%);
+}
+
+
+#lampbottom1 {
+  position: absolute;
+  height: 0px;
+  width: 60px;
+  border: solid;
+  border-color: black transparent transparent transparent;
+  border-width: 60px 20px 10px 20px;
+  left: 50%;
+  top: 10%;
+  margin-top: 250px;
+  transform: translate(-50%, -50%);
+}
+
+#lampbottom2 {
+  position: absolute;
+  height: 0px;
+  width: 60px;
+  border: solid;
+  border-color: transparent transparent black transparent;
+  border-width: 65px 20px 30px 20px;
+  left: 50%;
+  top: 10%;
+  margin-top: 249px;
+  transform: translate(-50%, -50%);
+}
+
+#lampglass {
+   position: absolute;
+  height: 0px;
+  width: 68px;
+  border: solid;
+  border-color: transparent transparent orange transparent;
+  border-width: 0px 16px 180px 16px;
+  left: 50%;
+  top: 10%;
+  margin-top: 125px;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+}
+
+.bubbles {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  background: red;
+  margin-top: 160px;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+#bubble1 {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  animation: bubbleborderradius 8s infinite alternate,
+             movebubble1 40s infinite linear;
+}
+
+#bubble2 {
+  height: 40px;
+  width: 25px;
+  border-radius: 50%;
+  animation: bubbleborderradius 8s infinite alternate,
+             movebubble2 20s infinite linear;
+}
+
+#bubble3 {
+  height: 23px;
+  width: 40px;
+  border-radius: 50%;
+  animation: bubbleborderradius 8s infinite alternate,
+             movebubble3 24s infinite alternate;
+}
+
+#bubble4 {
+  height: 25px;
+  width: 25px;
+  border-radius: 35%;
+  animation: bubbleborderradius 8s infinite alternate,
+             movebubble4 20s infinite linear;
+}
+
+#bubble5 {
+  height: 25px;
+  width: 20px;
+  border-radius: 50% 30% 20% 45% / 20% 50% 40% 27%;
+  animation: bubbleborderradius 4s infinite alternate,
+             movebubble5 20s infinite linear;
+}
+
+@keyframes movebubble1 {
+  0%, 100% {
+    transform: translate(-5px, 37px) skew(50deg);
+  }
+  25% {
+    transform: translate(-34.4px, -65px) scale(1.5);
+  }
+  50% {
+    transform: translate(-20px, -130px) scale(1) skew(-50deg);
+  }
+  75% {
+     transform: translate(14px, -60px) scale(1.2);
+  }
+}
+
+@keyframes movebubble2 {
+  0%, 100% {
+    transform: translate(-5px, 37px) skew(50deg);
+  }
+  25% {
+    transform: translate(-34.4px, -65px) scale(1.5);
+  }
+  50% {
+    transform: translate(-20px, -130px) scale(1) skew(-50deg);
+  }
+  75% {
+     transform: translate(14px, -60px) scale(1.2);
+  }
+}
+
+@keyframes movebubble3 {
+  0% {
+    transform: translate(-20px,-140px) skew(40deg);
+  }
+  100% {
+    transform: translate(-20px, 40px) scale(1) rotate(-60deg);
+  }
+}
+
+@keyframes movebubble4 {
+  0% 100% {
+    transform: translate(12px, -60px) scale(1.2);
+  }
+  30% {
+    transform: translate(-10px, -130px) scale(1) skew(-50deg);
+  }
+  60% {
+    transform: translate(-35px, -65px) scale(1.5);
+  }
+  75% {
+    transform: translate(5px, 37px) skew(50deg);
+  }
+}
+
+@keyframes movebubble5 {
+  0%, 100% {
+    transform: translate(5px, 37px) skew(50deg);
+  }
+  30% {
+    transform: translate(19px, -60px) scale(1.2);
+  }
+  60% {
+    transform: translate(-10px, -130px) scale(1) skew(-50deg);
+  }
+  75% {
+    transform: translate(-35.7px, -65px) scale(1.5);
+  }
+}
+
+@keyframes bubbleborderradius {
+  0% {
+    transform: rotateZ(-50deg)} 
+  25% {
+    border-radius: 40% 30% 60% 45% / 50% 50% 40% 57%;
+  }
+  50% {
+    border-radius: 65% 50% 40% 43% / 35% 86% 47% 20%;
+  }  
+  75% {
+    border-radius: 70% 30% 50% 100% / 50% 40% 70% 85%;
+  }
+  100% {
+    border-radius: 44% 33% 20% 45% / 20% 50% 65% 40%;
+  }
+}
