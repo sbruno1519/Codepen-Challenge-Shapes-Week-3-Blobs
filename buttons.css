@@ -1,0 +1,255 @@
+:root {
+  /*Scheme 1*/
+  --backcolor1: #333399;
+  --lampcolor1: orange;
+  --bubblecolor1: red;
+  
+  /*Scheme 2*/
+  --backcolor2: #e1dd72;
+  --lampcolor2:#a8c66c;
+  --bubblecolor2:#1b6535;
+    
+  /*Scheme 3*/
+  --backcolor3: blue;
+  --lampcolor3: lightblue;
+  --bubblecolor3: gold;
+}
+
+body {
+  position: absolute;
+  margin: 0;
+  background: var(--backcolor1);
+  height: 100%;
+  width: 100%;
+}
+
+#lamptop {
+  height: 0px;
+  width: 30px;
+  border: solid;
+  border-color: transparent transparent black transparent;
+  border-width:10px 20px 60px 20px;
+  background: transparent;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  margin-top: 1px;
+  transform: translate(-50%, -50%);
+}
+
+
+#lampbottom1 {
+  position: absolute;
+  height: 0px;
+  width: 60px;
+  border: solid;
+  border-color: black transparent transparent transparent;
+  border-width: 60px 20px 10px 20px;
+  left: 50%;
+  top: 10%;
+  margin-top: 250px;
+  transform: translate(-50%, -50%);
+}
+
+#lampbottom2 {
+  position: absolute;
+  height: 0px;
+  width: 60px;
+  border: solid;
+  border-color: transparent transparent black transparent;
+  border-width: 65px 20px 30px 20px;
+  left: 50%;
+  top: 10%;
+  margin-top: 249px;
+  transform: translate(-50%, -50%);
+}
+
+#lampglass {
+  position: absolute;
+  height: 0px;
+  width: 68px;
+  border: solid;
+  border-color: transparent transparent var(--lampcolor1) transparent;
+  border-width: 0px 16px 180px 16px;
+  left: 50%;
+  top: 10%;
+  margin-top: 125px;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+}
+
+.bubbles {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  background: var(--bubblecolor1);
+  margin-top: 160px;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+#bubble1 {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  animation: bubbleborderradius 8s infinite alternate,
+             movebubble1 40s infinite linear;
+}
+
+#bubble2 {
+  height: 40px;
+  width: 25px;
+  border-radius: 50%;
+  animation: bubbleborderradius 8s infinite alternate,
+             movebubble2 20s infinite linear;
+}
+
+#bubble3 {
+  height: 23px;
+  width: 40px;
+  border-radius: 50%;
+  animation: bubbleborderradius 8s infinite alternate,
+             movebubble3 24s infinite alternate;
+}
+
+#bubble4 {
+  height: 25px;
+  width: 25px;
+  border-radius: 35%;
+  animation: bubbleborderradius 8s infinite alternate,
+             movebubble4 20s infinite linear;
+}
+
+#bubble5 {
+  height: 25px;
+  width: 20px;
+  border-radius: 50% 30% 20% 45% / 20% 50% 40% 27%;
+  animation: bubbleborderradius 4s infinite alternate,
+             movebubble5 20s infinite linear;
+}
+
+@keyframes movebubble1 {
+  0%, 100% {
+    transform: translate(-5px, 37px) skew(50deg);
+  }
+  25% {
+    transform: translate(-34.4px, -65px) scale(1.5);
+  }
+  50% {
+    transform: translate(-20px, -130px) scale(1) skew(-50deg);
+  }
+  75% {
+     transform: translate(14px, -60px) scale(1.2);
+  }
+}
+
+@keyframes movebubble2 {
+  0%, 100% {
+    transform: translate(-5px, 37px) skew(50deg);
+  }
+  25% {
+    transform: translate(-34.4px, -65px) scale(1.5);
+  }
+  50% {
+    transform: translate(-20px, -130px) scale(1) skew(-50deg);
+  }
+  75% {
+     transform: translate(14px, -60px) scale(1.2);
+  }
+}
+
+@keyframes movebubble3 {
+  0% {
+    transform: translate(-20px,-140px) skew(40deg);
+  }
+  100% {
+    transform: translate(-20px, 40px) scale(1) rotate(-60deg);
+  }
+}
+
+@keyframes movebubble4 {
+  0% 100% {
+    transform: translate(12px, -60px) scale(1.2);
+  }
+  30% {
+    transform: translate(-10px, -130px) scale(1) skew(-50deg);
+  }
+  60% {
+    transform: translate(-35px, -65px) scale(1.5);
+  }
+  75% {
+    transform: translate(5px, 37px) skew(50deg);
+  }
+}
+
+@keyframes movebubble5 {
+  0%, 100% {
+    transform: translate(5px, 37px) skew(50deg);
+  }
+  30% {
+    transform: translate(19px, -60px) scale(1.2);
+  }
+  60% {
+    transform: translate(-10px, -130px) scale(1) skew(-50deg);
+  }
+  75% {
+    transform: translate(-35.7px, -65px) scale(1.5);
+  }
+}
+
+@keyframes bubbleborderradius {
+  0% {
+    transform: rotateZ(-50deg)} 
+  25% {
+    border-radius: 40% 30% 60% 45% / 50% 50% 40% 57%;
+  }
+  50% {
+    border-radius: 65% 50% 40% 43% / 35% 86% 47% 20%;
+  }  
+  75% {
+    border-radius: 70% 30% 50% 100% / 50% 40% 70% 85%;
+  }
+  100% {
+    border-radius: 44% 33% 20% 45% / 20% 50% 65% 40%;
+  }
+}
+
+.schemes {
+  display: flex;
+  justify-content: center;
+  margin-top: 280px;
+}
+.schemebuttons {
+  text-transform: uppercase;
+  margin: 100px 10px;
+  padding: 10px;
+  border-radius: 90% 50% 90% 80% / 70% 96% 65% 60%;
+  border: 3px solid;
+  font-weight: bold;
+}
+
+#scheme1 {
+  color: var(--backcolor1);
+  background: var(--lampcolor1);
+  border-color: var(--bubblecolor1);
+}
+
+#scheme1.open {}
+
+#scheme2 {
+  color: var(--backcolor2);
+  background: var(--lampcolor2);
+  border-color: var(--bubblecolor2);
+}
+
+#scheme3 {
+  color: var(--backcolor3);
+  background: var(--lampcolor3);
+  border-color: var(--bubblecolor3);
+}
+
+.schemebuttons:hover {
+ border-radius: 60% 40% 40% 80% / 70% 40% 55% 40%;
+}
+
+
