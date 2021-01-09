@@ -3,20 +3,6 @@ var scheme1button = document.getElementById("scheme1");
 var scheme2button = document.getElementById("scheme2");
 var scheme3button = document.getElementById("scheme3");
 
-//Get Colors
-/*Scheme1*/
-var backcolor1 = document.documentElement.style.getPropertyValue('--backcolor1');
-var lampcolor1 = document.documentElement.style.getPropertyValue('--lampcolor1');
-var bubblecolor1 = document.documentElement.style.getPropertyValue('--bubblecolor1');
-/*Scheme2*/
-var backcolor2 = document.documentElement.style.getPropertyValue('--backcolor2');
-var lampcolor2 = document.documentElement.style.getPropertyValue('--lampcolor2');
-var bubblecolor2 = document.documentElement.style.getPropertyValue('--bubblecolor2');
-/*Scheme3*/
-var backcolor3 = document.documentElement.style.getPropertyValue('--backcolor3');
-var lampcolor3 = document.documentElement.style.getPropertyValue('--lampcolor3');
-var bubblecolor3 = document.documentElement.style.getPropertyValue('--bubblecolor3');
-
 //Buttons
 //Scheme 1
 scheme1button.onclick = function() {
